@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  /* Light theme defaults */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+}
+
+.dark {
+  /* Dark theme values */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar example */
+.navbar {
+  @apply bg-[var(--color-bg-secondary)] shadow-sm;
+}
+
+/* Card example */
+.card {
+  @apply bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)] 
+         rounded-lg p-4 shadow;
+}
+.dark {
+  @apply bg-gray-900 text-gray-100;
+}
